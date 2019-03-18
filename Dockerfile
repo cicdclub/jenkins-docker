@@ -7,13 +7,17 @@ RUN \
   apt-get clean && \
   apt-get update && \
   apt-get install -y \
+    sudo \
     curl \
     unzip \
     bzip2 \
     ansible \
     git && \
   wget -qO- https://get.docker.com/ | sh && \
-  usermod -aG docker jenkins
+  ## allowing jenkins user to run sudo commands
+  echo "jenkins ALL=(ALL) NOPASSWD: /usr/bin/docker" > /etc/sudoers.d/docker && \
+  ## avoid typing sudo in command line
+  echo "alias docker='sudo docker '" >> /etc/bash.bashrc
 
 # Install Terraform
 ENV TERRAFORM_VERSION 0.11.13
