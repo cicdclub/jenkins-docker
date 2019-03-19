@@ -3,3 +3,4 @@ ansible
 docker
 terraform
 workflow-remote-loader
+ghprb
