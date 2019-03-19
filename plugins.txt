@@ -3,4 +3,6 @@ ansible
 docker
 terraform
 workflow-remote-loader
-ghprb
+workflow-basic-steps
+pipeline-build-step
+pipeline-input-step
