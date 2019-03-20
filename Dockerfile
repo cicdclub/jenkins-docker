@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:lts
+
 USER root
 WORKDIR /tmp
 
