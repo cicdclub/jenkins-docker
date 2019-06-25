@@ -6,3 +6,4 @@ workflow-remote-loader
 workflow-basic-steps
 pipeline-build-step
 pipeline-input-step
+rancher
